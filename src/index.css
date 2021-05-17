@@ -1,13 +1,159 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #dde4ee;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'montserrat', sans-serif;
+  background-color: #85aed6;
+}
+
+header {
+  padding: 50px 15px 0px;
+}
+
+header h1 {
+  color: #4f4f4b;
+  font-size: 42px;
+  font-weight: 540;
+  text-align: center;
+  font-family: cursive;
+}
+
+main {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 15px;
+}
+
+.searchbox {
+  display: block;
+  width: 100%;
+  padding: 15px;
+
+  outline: none;
+  background: none;
+
+  background-color: #ffffff;
+  border-radius: 8px;
+
+  color: #53565A;
+  font-size: 20px;
+  }
+
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px -15px;
+}
+
+.movies .result {
+  width: 33.333%;
+  min-width: 250px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.movies .result img {
+  display: block;
+  width: 100%;
+}
+
+.movies .result h3 {
+  color: #ebf0f5;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  background: #929497;
+  flex: 1 1 100%;
+  transition: 0.4s ease-out;
+}
+
+.movies .result:hover h3 {
+  background: #ffffff;
+  color: #738aa3;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #b6c5c9;
+
+  overflow-y: scroll;
+}
+
+.popup .content {
+  display: block;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 25px;
+  color: #868a8b;
+}
+
+.popup .content h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.popup .content h2 span {
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.popup .content .rating {
+  margin-top: 25px;
+}
+
+.popup .content .runtime {
+  margin-bottom: 30px;
+}
+
+.popup .content .plot {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px -15px 30px;
+}
+
+.popup .content .plot img {
+  flex: 1 1 50%;
+  max-width: 300px;
+  padding: 0px 15px;
+}
+
+.popup .content .plot p {
+  flex: 1 1 50%;
+  padding: 15px;
+}
+
+.popup .content .close {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: 700;
+
+  background: #626aaa;
+  color: #ffffff;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+
+  transition: 0.4s ease-out;
+}
+
+.popup .content .close:hover {
+  background: #2a337d;
 }
