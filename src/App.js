@@ -15,6 +15,7 @@ function App() {
 
   const search = (e) => {
     if (e.key ==="Enter") {
+      if (state.s!=="") {
       axios(apiUrl + "&s=" + state.s).then(({ data }) => {
         let movies = data.Search;
 
@@ -22,15 +23,16 @@ function App() {
           return { ...prevState, movies: movies }
         })
       });
-  }
-}
+    } else 
+      alert("Enter movie name")
+  } //enter if pab
+} //funkcijos pabaiga
 
   const handleInput = (e) => {
     let s = e.target.value;
-
     setState(prevState => {
       return { ...prevState, s: s }
-    });
+  });
   }
 
   const openPopup = id => {
